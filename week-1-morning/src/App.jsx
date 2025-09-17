@@ -1,6 +1,5 @@
 import "./App.css";
-import { MainUserInfo } from "./components/main.user.info";
-
+import CryptoJourney from "./pages/crypto.jouryney";
 /**
  * Components
  * 1. Main User Information
@@ -10,28 +9,9 @@ import { MainUserInfo } from "./components/main.user.info";
  */
 
 function App() {
-  const userInfo = {
-    name: "Hang Minh Nguyen",
-    position: "UI - UX Designer",
-    department: "Product",
-    phoneNumber: "5555555",
-    email: "something@gmail.com",
-    staffId: "SJ48579",
-  };
-
-  const userInfo2 = {
-    name: "Martin Michael Jordan",
-    position: "UI - UX Designer",
-    department: "Product",
-    phoneNumber: "5555555",
-    email: "something@gmail.com",
-    staffId: "SJ48579",
-  };
-
   return (
     <>
-      <MainUserInfo userInfo={userInfo} />
-      <MainUserInfo userInfo={userInfo2} />
+      <CryptoJourney />
     </>
   );
 }
