@@ -1,17 +1,10 @@
 import "./App.css";
-import CryptoJourney from "./pages/crypto.jouryney";
-/**
- * Components
- * 1. Main User Information
- * 2. Personal Information
- * 3. Education Information
- * 4. Account Information
- */
+import Todo from "./components/day-2/todo/todo";
 
 function App() {
   return (
     <>
-      <CryptoJourney />
+      <Todo />
     </>
   );
 }

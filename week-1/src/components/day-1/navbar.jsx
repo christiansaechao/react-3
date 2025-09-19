@@ -1,6 +1,4 @@
 import React from "react";
-import "./navbar.css";
-
 /**
  * props {
  *  navLinks:
@@ -14,7 +12,7 @@ export const Navbar = ({ navLinks, navButtons }) => {
     <div className="flex flex-row justify-between items-center">
       <div className="flex flex-row items-center gap-4">
         {navLinks.map((links) => (
-          <a href={links.link}>{links.text}</a>
+          <a key={links.text} href={links.link}>{links.text}</a>
         ))}
       </div>
 

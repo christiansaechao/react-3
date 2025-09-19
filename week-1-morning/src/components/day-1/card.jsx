@@ -1,6 +1,5 @@
 import React from "react";
-import "../App.css";
-import image from "../assets/test.png";
+import image from "../../assets/test.png";
 
 /**
  *  props {

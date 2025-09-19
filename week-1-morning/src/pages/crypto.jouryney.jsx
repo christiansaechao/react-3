@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CryptoHeader from "../components/cryptoheader";
-import Card from "../components/card.jsx";
+import CryptoHeader from "../components/day-1/cryptoheader.jsx";
+import Card from "../components/day-1/card.jsx";
 import "./crypto.styles.css";
 
 /**
