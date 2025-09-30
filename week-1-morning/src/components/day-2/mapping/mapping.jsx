@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Using map return a list of all the numbers in nums doubled. put them in a <p></p> tag
  */
 
 const DoubleNum = () => {
-  const nums = [1, 2, 3, 4];
+  const nums = [1, 2, 3, 4, 5];
 
   return (
-    <div>
-      {nums.map((num, idx) => {
-        const doubledNum = num * 2;
-
-        return <p>{doubledNum}</p>;
+    <>
+      {nums.map((num) => {
+        return <div>{num * 2}</div>;
       })}
-    </div>
+    </>
   );
 };
 
@@ -24,34 +22,40 @@ const DoubleNum = () => {
 
 const JSXElements = () => {
   const frameworks = ["react", "vue", "angular"];
-  return <div>{frameworks.map(framework => <div>{framework}</div>)}</div>;
+
+  return (
+    <>
+      {frameworks.map((framework) => {
+        return <div>{framework}</div>;
+      })}
+    </>
+  );
 };
 
-/**
- * Create a small user profile card, using the users list. Map over the elements and return the user's name inside of a span tag
- *
- */
+// Component mapping.jsx
+import { UsersList } from "./UsersList";
+import SelectedUsers from "./SelectedUsers";
 
-const UsersList = () => {
+const Mapping = () => {
+  // [selectedUsers] => read only
+  // [setSelectedUsers] => function to update selectedUsers
+  const [selectedUsers, setSelectedUsers] = useState([]);
+
+  // spread operator
+  const addNewSelectedUser = (newUser) => {
+    setSelectedUsers([...selectedUsers, newUser])
+  }
+  
   const users = [
     { employeeId: 1, name: "Alice" },
     { employeeId: 2, name: "Bob" },
     { employeeId: 3, name: "Charlie" },
   ];
 
-  return <div>
-    {users.map((user, idx) => {
-      return <div>{user.employeeId + " " +   user.name}</div>
-    })}
-  </div>;
-};
-
-const Mapping = () => {
   return (
     <div>
-      <DoubleNum />
-      <JSXElements />
-      <UsersList />
+      <UsersList users={users} addNewSelectedUser={addNewSelectedUser} />
+      <SelectedUsers selectedUsers={selectedUsers} />
     </div>
   );
 };

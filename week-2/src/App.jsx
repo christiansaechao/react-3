@@ -1,26 +1,26 @@
-import { useState } from "react";
-import useFetchData from "./custom-hooks/useFetchData";
-import "./App.css";
-
-/**
- * Build a dashboard - due on Thursday
- * - Components, API Request
- * - useState, useEffect
- * - map, filter, reduce
- */
-
 function App() {
-  const [count, setCount] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [data, error, getData] = useFetchData();
-  // https://randomuser.me/api/
+  /**
+   * // Job Board
+    const options = {
+      method: 'GET',
+      url: 'https://active-jobs-db.p.rapidapi.com/active-ats-24h',
+      params: {
+        limit: '10',
+        offset: '0',
+        title_filter: '"Data Engineer"',
+        location_filter: '"United States" OR "United Kingdom"',
+        description_type: 'text'
+      },
+      headers: {
+        'x-rapidapi-key': 'ba1cbb2855msh6c45100813234f6p1a992ajsn591e2ba8ab1d',
+        'x-rapidapi-host': 'active-jobs-db.p.rapidapi.com'
+      }
+    };
+   */
 
   return (
     <>
-      <div className="card">
-        <button onClick={() => getData(url, key)}>Get Recipe</button>
-        <button onClick={() => getData("https://randomuser.me/api/")}>Get User</button>
-      </div>
+      <div className="card"></div>
     </>
   );
 }

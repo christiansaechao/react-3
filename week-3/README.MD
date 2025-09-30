@@ -1,11 +1,10 @@
-**Class 5 Homework (Context & Zustand)**
+### React Router Quickstart
 
-- Create a global theme state (light/dark).
-- Use Context or Zustand to toggle it across multiple components.
-- Bonus: Persist theme in `localStorage`.
+# React Router Documentation https://reactrouter.com/start/declarative/installation
 
-**Class 6 Homework (Redux & Routing)**
+# Declarative Mode(easiest): enables basic routing features like matching URLs to components, navigating around the app, and providing active states with APIs like <Link>, useNavigate, and useLocation.
 
-- Set up Redux for global state management (e.g., count or todos).
-- Create 3 pages using React Router (Home, About, Dashboard).
-- Protect the Dashboard route with a fake auth flag.
+# Data Mode(more control, more setup though): By moving route configuration outside of React rendering, Data Mode adds data loading, actions, pending states and more with APIs like loader, action, and useFetcher.
+
+# Framework (don't worry about this one, but it's in the documentation)
+# Use this if you're familiar with file based routing. 

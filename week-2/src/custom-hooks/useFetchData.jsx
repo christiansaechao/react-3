@@ -6,6 +6,7 @@ import axios from "axios";
  */
 
 const useFetchData = () => {
+  // [state, setterFunction]
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -20,7 +21,6 @@ const useFetchData = () => {
 
       const { data } = await axios.get(url, options);
       setData(data);
-      console.log(data);
     } catch (e) {
       setError(e);
     }
