@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 /**
  * Using map return a list of all the numbers in nums doubled. put them in a <p></p> tag
@@ -40,10 +40,12 @@ const Mapping = () => {
   // [selectedUsers] => read only
   // [setSelectedUsers] => function to update selectedUsers
   const [selectedUsers, setSelectedUsers] = useState([]);
+  const [name, setName] = useState('Chris');
 
   // spread operator
   const addNewSelectedUser = (newUser) => {
-    setSelectedUsers([...selectedUsers, newUser])
+    setSelectedUsers([...selectedUsers, newUser]);
+    localStorage.setItem("item added to local storage");
   }
   
   const users = [
@@ -51,6 +53,12 @@ const Mapping = () => {
     { employeeId: 2, name: "Bob" },
     { employeeId: 3, name: "Charlie" },
   ];
+
+  useEffect(() => {
+    console.log("Use Effect is being ran")
+    const cartItems = localStorage.getItem("Our items");
+    setItems(cartItems);
+  }, []);
 
   return (
     <div>

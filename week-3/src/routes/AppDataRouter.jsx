@@ -1,6 +1,6 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
+// import { RouterProvider } from "react-router-dom";
+// import { router } from "./router";
 
-export default function AppDataRouter() {
-  return <RouterProvider router={router} />;
-}
+// export default function AppDataRouter() {
+//   return <RouterProvider router={router} />;
+// }
